@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dolce Vita - Music Store</title>
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    .app-container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #1E1E1E;
+      padding: 20px 15px;
+      border-right: 1px solid #333;
+      overflow-y: auto;
+    }
+
+    .sidebar-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      color: #9C27B0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .sidebar-logo img {
+      margin-right: 10px;
+    }
+
+    .sidebar-menu {
+      list-style: none;
+    }
+
+    .menu-item {
+      margin-bottom: 10px;
+    }
+
+    .menu-item a {
+      display: flex;
+      align-items: center;
+      color: #B0B0B0;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .menu-item a:hover,
+    .menu-item a.active {
+      background-color: rgba(156, 39, 176, 0.1);
+      color: #9C27B0;
+    }
+
+    .menu-item a i {
+      margin-right: 10px;
+    }
+
+    .submenu {
+      padding-left: 20px;
+      display: none;
+    }
+
+    .submenu.active {
+      display: block;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      overflow-y: auto;
+      background-color: #121212;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #1E1E1E;
+      border-bottom: 1px solid #333;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      background-color: #2C2C2C;
+      border-radius: 20px;
+      padding: 5px 10px;
+    }
+
+    .search-container input {
+      background: transparent;
+      border: none;
+      color: white;
+      margin-left: 10px;
+      width: 250px;
+    }
+
+    .navbar-actions a {
+      color: #B0B0B0;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+
+    /* HERO SECTION UPDATE */
+    .hero-section {
+      position: relative;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .cta-button {
+      background-color: #9C27B0;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #7B1FA2;
+    }
+
+    .featured-categories {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 20px;
+      background-color: #1E1E1E;
+    }
+
+    .category-item {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .category-item:hover {
+      background-color: rgba(156, 39, 176, 0.1);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product-card {
+      background-color: #1E1E1E;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-logo">
+        <img src="music-icon.png" alt="Dolce Vita Logo" width="30" />
+        Dolce Vita
+      </div>
+      <ul class="sidebar-menu">
+        <li class="menu-item">
+          <a href="#" class="active"><i class="fa-solid fa-house"></i> Instruments</a>
+          <ul class="submenu">
+            <li><a href="#">String Instruments</a></li>
+            <li><a href="#">Wind Instruments</a></li>
+            <li><a href="#">Brass Instruments</a></li>
+          </ul>
+        </li>
+        <li class="menu-item"><a href="#"><i class="fa-solid fa-briefcase"></i> Cases</a></li>
+        <li class="menu-item">
+          <a href="#"><i class="fa-solid fa-book"></i> Accessories</a>
+          <ul class="submenu">
+            <li><a href="#">Wind Accessories</a></li>
+            <li><a href="#">Brass Accessories</a></li>
+            <li><a href="#">String Accessories</a></li>
+            <li><a href="#">Other</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#"><i class="fa-solid fa-book"></i> Books & Resources</a>
+          <ul class="submenu">
+            <li><a href="#">String Books</a></li>
+            <li><a href="#">Wind Books</a></li>
+            <li><a href="#">Brass Books</a></li>
+            <li><a href="#">Piano Books</a></li>
+            <li><a href="#">Music Theory</a></li>
+          </ul>
+        </li>
+        <li class="menu-item"><a href="#"><i class="fa-solid fa-circle-info"></i> Help</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search products..." class="search-input" />
+        </div>
+        <div class="navbar-actions">
+          <a href="#">Products</a>
+          <a href="#">Cart</a>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1>Start Your Musical Journey with Dolce Vita</h1>
+          <p>To provide a seamless and trustworthy shopping experience for musicians by ensuring easy access to a wide variety of high-quality instruments, transparent pricing, and reliable customer support. Build a reputation for integrity and excellence by offering expert advice, secure transactions, and convenient options for purchasing, renting, or ordering instruments</p>
+          <button class="cta-button">
+            <i class="fa fa-music"></i> Shop Now
+          </button>
+        </div>
+      </section>
+
+      <!-- Featured Categories -->
+      <section class="featured-categories">
+        <div class="category-item">
+          <i class="fa-solid fa-music fa-2x"></i>
+          <h3>Violins</h3>
+        </div>
+        <div class="category-item">
+          <i class="fa-solid fa-bow-arrow fa-2x"></i>
+          <h3>Bows</h3>
+        </div>
+        <div class="category-item">
+          <i class="fa-solid fa-amp-guitar fa-2x"></i>
+          <h3>Accessories</h3>
+        </div>
+      </section>
+
+      <!-- Product Grid -->
+      <section class="product-grid">
+        <!-- Product Cards -->
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuItems = document.querySelectorAll('.menu-item');
+
+      menuItems.forEach(item => {
+        const link = item.querySelector('a');
+        const submenu = item.querySelector('.submenu');
+        link.addEventListener('click', e => {
+          menuItems.forEach(m => m.querySelector('a').classList.remove('active'));
+          link.classList.add('active');
+          if (submenu) submenu.classList.toggle('active');
+        });
+      });
+
+      const products = [
+        {
+          name: 'Classic Violin',
+          category: 'Violins',
+          price: 1500,
+          image: 'violin1.png'
+        },
+        {
+          name: 'Professional Bow',
+          category: 'Bows',
+          price: 500,
+          image: 'bow1.png'
+        }
+      ];
+
+      function renderProducts(productList) {
+        const productGrid = document.querySelector('.product-grid');
+        productGrid.innerHTML = '';
+        productList.forEach(product => {
+          const productCard = document.createElement('div');
+          productCard.classList.add('product-card');
+          productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <div class="product-details">
+              <h3>${product.name}</h3>
+              <p>${product.category}</p>
+              <p>$${product.price}</p>
+              <button>Add to Cart</button>
+            </div>
+          `;
+          productGrid.appendChild(productCard);
+        });
+      }
+
+      renderProducts(products);
+    });
+  </script>
+</body>
+</html>
