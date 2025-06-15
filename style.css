@@ -18,7 +18,7 @@
     }
 
     .sidebar {
-      width: 250px;
+      width: 170px;
       background-color: #1E1E1E;
       padding: 20px 15px;
       border-right: 1px solid #333;
@@ -30,7 +30,7 @@
       align-items: center;
       margin-bottom: 30px;
       color: #9C27B0;
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: bold;
     }
 
@@ -205,8 +205,8 @@
     }
 
     .product-card img {
-      width: 100%;
-      height: 300px;
+      width: 20%;
+      height: 100px;
       object-fit: cover;
     }
 
@@ -214,3 +214,67 @@
       padding: 15px;
     }
   
+
+/* Light Theme Support */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.light-mode .sidebar {
+  background-color: #f0f0f0;
+  border-right: 1px solid #ccc;
+}
+
+body.light-mode .menu-item a {
+  color: #444;
+}
+
+body.light-mode .menu-item a:hover,
+body.light-mode .menu-item a.active {
+  background-color: rgba(156, 39, 176, 0.2);
+  color: #6A1B9A;
+}
+
+body.light-mode .main-content {
+  background-color: #ffffff;
+}
+
+body.light-mode .navbar {
+  background-color: #eeeeee;
+  border-bottom: 1px solid #ccc;
+}
+
+body.light-mode .search-container {
+  background-color: #ddd;
+}
+
+body.light-mode .search-container input {
+  color: black;
+}
+
+body.light-mode .navbar-actions a {
+  color: #333;
+}
+
+body.light-mode .featured-categories {
+  background-color: #f0f0f0;
+}
+
+body.light-mode .product-card {
+  background-color: #f9f9f9;
+}
+
+/* Theme toggle button style */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e1320f;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 70px;
+  cursor: pointer;
+  z-index: 1000;
+}

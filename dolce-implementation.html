@@ -6,15 +6,14 @@
   <title>Dolce Vita - Music Store</title>
   <script src="https://cdn.tailwindcss.com/"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
- <link rel="stylesheet" href="style.css">
- 
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="app-container">
     <!-- Sidebar -->
     <div class="sidebar">
       <div class="sidebar-logo">
-        <img src="C:\Users\az\Desktop\Violin-Store-dolce_vita\My Project\image-icon.jpg" alt="Dolce Vita Logo" width="30" />
+        <img src="Images\Image.png" alt="Dolce Vita Logo" width="30" />
         Dolce Vita
       </div>
       <ul class="sidebar-menu">
@@ -97,57 +96,10 @@
       </section>
     </div>
   </div>
+<button id="theme-toggle" class="theme-toggle">
+  <i class="fa-solid fa-lightbulb"></i>
+</button>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuItems = document.querySelectorAll('.menu-item');
-
-      menuItems.forEach(item => {
-        const link = item.querySelector('a');
-        const submenu = item.querySelector('.submenu');
-        link.addEventListener('click', e => {
-          menuItems.forEach(m => m.querySelector('a').classList.remove('active'));
-          link.classList.add('active');
-          if (submenu) submenu.classList.toggle('active');
-        });
-      });
-
-      const products = [
-        {
-          name: 'Classic Violin',
-          category: 'Violins',
-          price: 1500,
-          image: 'violin1.png'
-        },
-        {
-          name: 'Professional Bow',
-          category: 'Bows',
-          price: 500,
-          image: 'bow1.png'
-        }
-      ];
-
-      function renderProducts(productList) {
-        const productGrid = document.querySelector('.product-grid');
-        productGrid.innerHTML = '';
-        productList.forEach(product => {
-          const productCard = document.createElement('div');
-          productCard.classList.add('product-card');
-          productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <div class="product-details">
-              <h3>${product.name}</h3>
-              <p>${product.category}</p>
-              <p>$${product.price}</p>
-              <button>Add to Cart</button>
-            </div>
-          `;
-          productGrid.appendChild(productCard);
-        });
-      }
-
-      renderProducts(products);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
