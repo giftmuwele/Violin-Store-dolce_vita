@@ -49,22 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
   renderProducts(products);
 
   // Theme toggle with icon switching
-  const themeToggle = document.querySelector('#theme-toggle');
-  const icon = themeToggle.querySelector('i');
+  const toggle = document.getElementById('theme-toggle');
+const icon = document.getElementById('theme-icon');
 
-  function updateIcon() {
-    if (document.body.classList.contains('light-mode')) {
-      icon.classList.remove('fa-lightbulb');
-      icon.classList.add('fa-sun');
-    } else {
-      icon.classList.remove('fa-sun');
-      icon.classList.add('fa-lightbulb');
-    }
-  }
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  icon.classList.toggle('fa-sun');
+  icon.classList.toggle('fa-lightbulb');
 
-  themeToggle?.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    updateIcon();
   });
 
   // Initialize icon on load

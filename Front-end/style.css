@@ -263,6 +263,8 @@ body.light-mode .featured-categories {
 
 body.light-mode .product-card {
   background-color: #f9f9f9;
+  color: #000;
+
 }
 
 /* Theme toggle button style */
