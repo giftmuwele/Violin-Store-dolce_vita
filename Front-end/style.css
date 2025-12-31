@@ -33,19 +33,9 @@ body {
   border-bottom: 1px solid #d9d4cf;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
 .logo img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: white;
-  padding: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 140px;
+  height: auto;
 }
 
 .search {
@@ -134,13 +124,13 @@ body {
 .container {
   display: flex;
   height: 600px;
-  background: linear-gradient(to bottom, #2d2521 0%, #252019 100%);
+  background: linear-gradient(to bottom, #4a4543 0%, #3a3634 100%);
 }
 
 /* Sidebar */
 .sidebar {
   width: 350px;
-  background: linear-gradient(to bottom, #2d2521 0%, #252019 100%);
+  background: linear-gradient(to bottom, #4a4543 0%, #3a3634 100%);
   padding: 40px 25px;
   display: flex;
   flex-direction: column;
@@ -185,7 +175,7 @@ body {
 .hero {
   flex: 1;
   position: relative;
-  background: linear-gradient(135deg, rgba(100, 90, 80, 0.3) 0%, rgba(80, 70, 60, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(139, 125, 115, 0.25) 0%, rgba(115, 102, 92, 0.15) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,14 +184,14 @@ body {
 
 .hero-image {
   position: absolute;
-  top: 45%;
-  left: 55%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
-  max-width: 900px;
+  width: 70%;
+  max-width: 800px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
 }
 
 .cta {
@@ -211,7 +201,7 @@ body {
   z-index: 10;
 }
 
-.order-btn {
+order-btn {
   background: linear-gradient(135deg, #d97038 0%, #c05f2a 100%);
   color: white;
   border: none;
@@ -235,12 +225,12 @@ body {
 
 /* Bottom Navigation */
 .bottom-nav {
-  background: linear-gradient(to bottom, #2d2521 0%, #252019 100%);
+  background: linear-gradient(to bottom, #4a4543 0%, #3a3634 100%);
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  border-top: 1px solid #3d3531;
+  border-top: 1px solid #5a5350;
 }
 
 .nav-item {
