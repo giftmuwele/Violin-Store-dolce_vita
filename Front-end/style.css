@@ -39,8 +39,8 @@ body {
 }
 
 .logo img {
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
   background: white;
@@ -54,10 +54,10 @@ body {
 }
 
 .search input {
-  width: 70%;
+  width: 100%;
   padding: 12px 20px 12px 45px;
   border: 1px solid #ccc;
-  border-radius: 15px;
+  border-radius: 25px;
   font-size: 15px;
   background: white url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>') no-repeat 15px center;
 }
@@ -134,13 +134,13 @@ body {
 .container {
   display: flex;
   height: 600px;
-  background: linear-gradient(to bottom, #2d2521 0%, #252019 100%);
+  background: linear-gradient(to bottom, #5a4a3a 0%, #4a3a2a 100%);
 }
 
 /* Sidebar */
 .sidebar {
   width: 300px;
-  background: linear-gradient(to bottom, #2d2521 0%, #252019 100%);
+  background: linear-gradient(to bottom, #5a4a3a 0%, #4a3a2a 100%);
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
