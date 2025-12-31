@@ -1,105 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dolce Vita - Music Store</title>
-  <script src="https://cdn.tailwindcss.com/"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dolce Vita Music Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
   <div class="app-container">
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <div class="sidebar-logo">
-        <img src="Images\Image.png" alt="Dolce Vita Logo" width="30" />
-        Dolce Vita
+    <header class="topbar">
+      <div class="logo">
+        <img src="../Images/Logo.png" alt="Dolce Vita" />
       </div>
-      <ul class="sidebar-menu">
-        <li class="menu-item">
-          <a href="#" class="active"><i class="fa-solid fa-house"></i> Instruments</a>
-          <ul class="submenu">
-            <li><a href="#">String Instruments</a></li>
-            <li><a href="#">Wind Instruments</a></li>
-            <li><a href="#">Brass Instruments</a></li>
-          </ul>
-        </li>
-        <li class="menu-item"><a href="#"><i class="fa-solid fa-briefcase"></i> Cases</a></li>
-        <li class="menu-item">
-          <a href="#"><i class="fa-solid fa-book"></i> Accessories</a>
-          <ul class="submenu">
-            <li><a href="#">Wind Accessories</a></li>
-            <li><a href="#">Brass Accessories</a></li>
-            <li><a href="#">String Accessories</a></li>
-            <li><a href="#">Other</a></li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="#"><i class="fa-solid fa-book"></i> Books & Resources</a>
-          <ul class="submenu">
-            <li><a href="#">String Books</a></li>
-            <li><a href="#">Wind Books</a></li>
-            <li><a href="#">Brass Books</a></li>
-            <li><a href="#">Piano Books</a></li>
-            <li><a href="#">Music Theory</a></li>
-          </ul>
-        </li>
-        <li class="menu-item"><a href="#"><i class="fa-solid fa-circle-info"></i> Help</a></li>
-      </ul>
+
+      <div class="search">
+        <input type="text" placeholder="Search products..." />
+      </div>
+
+      <div class="actions">
+        <button class="icon-btn">
+          <span>♥</span> Wishlist
+        </button>
+        <button class="icon-btn">
+          <span>👤</span> Account <span style="font-size: 12px;">▼</span>
+        </button>
+        <button class="cart-btn">
+          🛒
+          <span class="badge">2</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="sort-bar">
+      <select class="sort-dropdown">
+        <option>Sort by: Popularity</option>
+        <option>Sort by: Price</option>
+        <option>Sort by: Rating</option>
+      </select>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="search-container">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" placeholder="Search products..." class="search-input" />
-        </div>
-        <div class="navbar-actions">
-          <a href="#">Products</a>
-          <a href="#">Cart</a>
-        </div>
-      </nav>
+    <main class="container">
+      <aside class="sidebar">
+        <button class="category active">
+          <span class="category-icon">🎻</span> Instruments
+        </button>
+        <button class="category">
+          <span class="category-icon">💼</span> Cases
+        </button>
+        <button class="category">
+          <span class="category-icon">📚</span> Books
+        </button>
+        <button class="category">
+          <span class="category-icon">🎵</span> Accessories
+        </button>
+      </aside>
 
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="hero-content">
-          <h1>Start Your Musical Journey with Dolce Vita</h1>
-          <p>To provide a seamless and trustworthy shopping experience for musicians by ensuring easy access to a wide variety of high-quality instruments, transparent pricing, and reliable customer support. Build a reputation for integrity and excellence by offering expert advice, secure transactions, and convenient options for purchasing, renting, or ordering instruments</p>
-          <button class="cta-button">
-            <i class="fa fa-music"></i> Shop Now
+      <section class="hero">
+        <img src="../Images/image-icon.jpg" alt="Violin" class="hero-image" />
+        <div class="cta">
+          <button class="order-btn">
+            <span>🎵</span> ORDER NOW
           </button>
         </div>
       </section>
+    </main>
 
-      <!-- Categories -->
-      <section class="featured-categories">
-        <div class="category-item">
-          <i class="fa-solid fa-music fa-2x"></i>
-          <h3>Violins</h3>
-        </div>
-        <div class="category-item">
-          <i class="fa-solid fa-bow-arrow fa-2x"></i>
-          <h3>Bows</h3>
-        </div>
-        <div class="category-item">
-          <i class="fa-solid fa-amp-guitar fa-2x"></i>
-          <h3>Accessories</h3>
-        </div>
-      </section>
-
-      <!-- Product Grid -->
-      <section class="product-grid">
-        <!-- Product Cards -->
-      </section>
-    </div>
+    <footer class="bottom-nav">
+      <div class="nav-item">
+        <span class="nav-icon">🏠</span>
+        <span>Home</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">♥</span>
+        <span>Wishlist</span>
+      </div>
+      <div class="nav-item" style="position: relative;">
+        <span class="nav-icon">📦</span>
+        <span>Orders</span>
+        <span class="badge">2</span>
+      </div>
+      <div class="nav-item">
+        <span class="nav-icon">👤</span>
+        <span>Account</span>
+      </div>
+    </footer>
   </div>
-<button id="theme-toggle" class="theme-toggle fixed bottom-6 right-6 bg-secondary hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 ease-in-out z-50">
-  <i id="theme-icon" class="fa-solid fa-lightbulb"></i>
-</button>
 
   <script src="script.js"></script>
 </body>
