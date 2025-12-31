@@ -54,7 +54,7 @@ body {
 }
 
 .search input {
-  width: 100%;
+  width: 60%;
   padding: 12px 20px 12px 45px;
   border: 1px solid #ccc;
   border-radius: 25px;
