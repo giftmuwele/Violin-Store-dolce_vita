@@ -187,11 +187,22 @@ body {
 .hero {
   flex: 1;
   position: relative;
-  background: linear-gradient(135deg, rgba(100, 90, 80, 0.3) 0%, rgba(80, 70, 60, 0.2) 100%);
+  background: linear-gradient(135deg, rgba(180, 170, 165, 0.4) 0%, rgba(150, 140, 135, 0.3) 50%, rgba(120, 110, 105, 0.2) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(220, 215, 210, 0.3) 0%, rgba(180, 170, 160, 0.2) 50%, transparent 100%);
+  pointer-events: none;
 }
 
 .hero-image {
