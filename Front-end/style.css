@@ -55,7 +55,7 @@ body {
 
 .search input {
   width: 100%;
-  padding: 12px 20px 12px 45px;
+  padding: 12px 15px 12px 45px;
   border: 1px solid #ccc;
   border-radius: 25px;
   font-size: 15px;
@@ -134,31 +134,31 @@ body {
 .container {
   display: flex;
   height: 600px;
-  background: linear-gradient(to bottom, #4a4543 0%, #3a3634 100%);
+  background: linear-gradient(to bottom, #2d2521 0%, #252019 100%);
 }
 
 /* Sidebar */
 .sidebar {
-  width: 330px;
-  background: linear-gradient(to bottom, #4a4543 0%, #3a3634 100%);
-  padding: 30px 25px;
+  width: 300px;
+  background: linear-gradient(to bottom, #2d2521 0%, #252019 100%);
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .category {
   background: linear-gradient(to bottom, #d9d4cf 0%, #ccc7c2 100%);
   border: none;
-  padding: 18px 25px;
-  border-radius: 30px;
-  font-size: 17px;
+  padding: 14px 20px;
+  border-radius: 25px;
+  font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   text-align: left;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   transition: all 0.3s ease;
   color: #2d2926;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -176,8 +176,8 @@ body {
 }
 
 .category-icon {
-  font-size: 24px;
-  width: 30px;
+  font-size: 22px;
+  width: 28px;
   display: inline-block;
 }
 
@@ -185,7 +185,7 @@ body {
 .hero {
   flex: 1;
   position: relative;
-  background: linear-gradient(135deg, rgba(139, 125, 115, 0.25) 0%, rgba(115, 102, 92, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(100, 90, 80, 0.3) 0%, rgba(80, 70, 60, 0.2) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,18 +197,21 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 950px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6));
 }
 
 .cta {
   position: absolute;
   bottom: 50px;
-  right: 80px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
+  display: flex;
+  justify-content: center;
 }
 
 .order-btn {
@@ -235,12 +238,12 @@ body {
 
 /* Bottom Navigation */
 .bottom-nav {
-  background: linear-gradient(to bottom, #4a4543 0%, #3a3634 100%);
+  background: linear-gradient(to bottom, #2d2521 0%, #252019 100%);
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  border-top: 1px solid #5a5350;
+  border-top: 1px solid #3d3531;
 }
 
 .nav-item {
