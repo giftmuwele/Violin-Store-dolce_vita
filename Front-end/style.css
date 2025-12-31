@@ -139,9 +139,9 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 350px;
+  width: 330px;
   background: linear-gradient(to bottom, #4a4543 0%, #3a3634 100%);
-  padding: 40px 25px;
+  padding: 30px 25px;
   display: flex;
   flex-direction: column;
   gap: 15px;
