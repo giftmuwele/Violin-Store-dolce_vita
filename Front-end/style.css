@@ -39,8 +39,8 @@ body {
 }
 
 .logo img {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   background: white;
@@ -50,14 +50,14 @@ body {
 
 .search {
   flex: 1;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .search input {
-  width: 100%;
+  width: 70%;
   padding: 12px 20px 12px 45px;
   border: 1px solid #ccc;
-  border-radius: 25px;
+  border-radius: 15px;
   font-size: 15px;
   background: white url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>') no-repeat 15px center;
 }
@@ -165,14 +165,16 @@ body {
 }
 
 .category:hover {
-  background: linear-gradient(to bottom, #c9c3bd 0%, #bbb6b1 100%);
+  background: linear-gradient(135deg, #d97038 0%, #c05f2a 100%);
+  color: white;
+  box-shadow: 0 4px 10px rgba(217, 112, 56, 0.3);
   transform: translateY(-1px);
 }
 
 .category.active {
-  background: linear-gradient(135deg, #d97038 0%, #c05f2a 100%);
-  color: white;
-  box-shadow: 0 4px 10px rgba(217, 112, 56, 0.3);
+  background: linear-gradient(to bottom, #d9d4cf 0%, #ccc7c2 100%);
+  color: #2d2926;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .category-icon {
