@@ -306,4 +306,13 @@ body {
     bottom: 30px;
     right: 30px;
   }
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.copyright::before {
+  content: 'Copyright ' + '\00A9' + ' 2025 Dolce Vita. All rights reserved.';
 }
