@@ -274,7 +274,7 @@ body {
 .order-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(217, 112, 56, 0.5);
-  background: linear-gradient(135deg, #e07b42 0%, #c96632 100%);
+  background: linear-gradient(135deg, #b86b3f 0%, #ae6a46 100%);
 }
 
 /* Bottom Navigation */
@@ -342,6 +342,7 @@ body {
   margin: 0;
   font-weight: 400;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
