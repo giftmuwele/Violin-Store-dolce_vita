@@ -420,36 +420,4 @@ body {
   flex-wrap: wrap;
 
 }
-.whatsapp-btn {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-  color: white;
-  padding: 10px 14px;
-  border-radius: 40px;
-  font-size: 15px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-  transition: all 0.3s ease;
-}
-
-.whatsapp-btn:hover {
-  background: linear-gradient(135deg, #2be177 0%, #14a089 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-  color: white;
-}
-
-.whatsapp-icon {
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.whatsapp-icon svg {
-  width: 20px;
-  height: 20px;
-}
 
