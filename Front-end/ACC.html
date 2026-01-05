@@ -1,0 +1,228 @@
+<!-- ...existing code... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Accessories - Dolce Vita Violin Store</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        :root{
+            --brand-bg:#2c3e50;
+            --accent:#f39c12;
+            --muted:#7f8c8d;
+            --card:#ffffff;
+            --page-bg:#f5f5f5;
+            --max-w:1200px;
+        }
+        /* Minimal overrides to ensure page matches theme/layout */
+        *{box-sizing:border-box}
+        body{font-family:Inter, system-ui, Arial, sans-serif; background:var(--page-bg); color:#222; margin:0}
+        header.site-header{background:var(--brand-bg); color:#fff; padding:22px 0; text-align:center}
+        header .brand{font-size:1.6rem; display:flex; align-items:center; justify-content:center; gap:12px}
+        nav.site-nav{background:#34495e; padding:12px 0; text-align:center}
+        nav.site-nav a{color:#fff; text-decoration:none; margin:0 14px; font-weight:600}
+        nav.site-nav a.active{color:var(--accent)}
+        .wrap{max-width:var(--max-w); margin:38px auto; padding:0 18px}
+        h1.page-title{font-size:2rem; color:var(--brand-bg); text-align:center; margin-bottom:22px}
+        .controls{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-bottom:26px}
+        .controls button{background:#ecf0f1;border:2px solid var(--brand-bg); padding:9px 16px; border-radius:8px; cursor:pointer; font-weight:600}
+        .controls button.active{background:var(--brand-bg); color:#fff; border-color:var(--brand-bg)}
+        .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:22px}
+        .card{background:var(--card); border-radius:10px; overflow:hidden; box-shadow:0 6px 20px rgba(44,62,80,0.06); display:flex; flex-direction:column}
+        .card .visual{height:180px; display:flex; align-items:center; justify-content:center; font-size:3rem; background:linear-gradient(180deg,#f8f9fa,#fff)}
+        .card .meta{padding:16px; flex:1; display:flex; flex-direction:column}
+        .meta .name{font-weight:700; color:var(--brand-bg); margin-bottom:8px}
+        .meta .desc{color:var(--muted); font-size:0.95rem; margin-bottom:12px; flex:1}
+        .meta .price{font-size:1.15rem; font-weight:800; color:var(--accent); margin-bottom:12px}
+        .meta .actions{display:flex; gap:10px}
+        .btn{padding:10px 12px; border-radius:8px; border:0; cursor:pointer; font-weight:700}
+        .btn.primary{background:var(--brand-bg); color:#fff; flex:1}
+        .btn.ghost{background:#f3f4f6; color:var(--brand-bg)}
+        footer.site-footer{background:var(--brand-bg); color:#fff; padding:18px 0; text-align:center; margin-top:36px}
+        @media (max-width:420px){ header .brand{font-size:1.1rem} .card .visual{height:140px} }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <span style="font-size:1.6rem">🎻</span>
+            <div>
+                <div style="font-weight:800">Dolce Vita Violin Store</div>
+                <div style="font-size:0.9rem; opacity:0.9">Premium violin accessories</div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="violins.html">Violins</a>
+        <a href="ACC.html" class="active">Accessories</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main class="wrap">
+        <h1 class="page-title">Accessories</h1>
+
+        <div class="controls" role="tablist" aria-label="Filter accessories">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="bows">Bows</button>
+            <button data-filter="strings">Strings</button>
+            <button data-filter="cases">Cases</button>
+            <button data-filter="maintenance">Maintenance</button>
+        </div>
+
+        <section class="grid" id="products">
+            <!-- cards include data-category for filtering -->
+            <article class="card" data-category="bows">
+                <div class="visual">🏹</div>
+                <div class="meta">
+                    <div class="name">Professional Violin Bow</div>
+                    <div class="desc">High-quality brazilwood bow with premium horsehair for balanced tone.</div>
+                    <div class="price">$145.00</div>
+                    <div class="actions">
+                        <button class="btn primary add">Add to Cart</button>
+                        <button class="btn ghost">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-category="strings">
+                <div class="visual">🎵</div>
+                <div class="meta">
+                    <div class="name">Premium Violin Strings Set</div>
+                    <div class="desc">Four-string set delivering warm, consistent tone and long life.</div>
+                    <div class="price">$35.00</div>
+                    <div class="actions">
+                        <button class="btn primary add">Add to Cart</button>
+                        <button class="btn ghost">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-category="maintenance">
+                <div class="visual">✨</div>
+                <div class="meta">
+                    <div class="name">Professional Rosin</div>
+                    <div class="desc">Clear, smooth rosin for excellent grip and response.</div>
+                    <div class="price">$12.00</div>
+                    <div class="actions">
+                        <button class="btn primary add">Add to Cart</button>
+                        <button class="btn ghost">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-category="maintenance">
+                <div class="visual">👤</div>
+                <div class="meta">
+                    <div class="name">Ergonomic Chin Rest</div>
+                    <div class="desc">Comfort-fit design for extended practice and performance.</div>
+                    <div class="price">$28.00</div>
+                    <div class="actions">
+                        <button class="btn primary add">Add to Cart</button>
+                        <button class="btn ghost">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-category="cases">
+                <div class="visual">📦</div>
+                <div class="meta">
+                    <div class="name">Violin Hard Case</div>
+                    <div class="desc">Secure hard-shell case with hygrometer and accessory compartment.</div>
+                    <div class="price">$89.00</div>
+                    <div class="actions">
+                        <button class="btn primary add">Add to Cart</button>
+                        <button class="btn ghost">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-category="maintenance">
+                <div class="visual">💪</div>
+                <div class="meta">
+                    <div class="name">Adjustable Shoulder Rest</div>
+                    <div class="desc">Lightweight, adjustable support for comfort and posture.</div>
+                    <div class="price">$22.00</div>
+                    <div class="actions">
+                        <button class="btn primary add">Add to Cart</button>
+                        <button class="btn ghost">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-category="maintenance">
+                <div class="visual">🎛️</div>
+                <div class="meta">
+                    <div class="name">Digital Violin Tuner</div>
+                    <div class="desc">Chromatic tuner with clear display for quick tuning.</div>
+                    <div class="price">$18.00</div>
+                    <div class="actions">
+                        <button class="btn primary add">Add to Cart</button>
+                        <button class="btn ghost">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-category="maintenance">
+                <div class="visual">⏱️</div>
+                <div class="meta">
+                    <div class="name">Digital Metronome</div>
+                    <div class="desc">60–240 BPM with visual beat and multiple modes.</div>
+                    <div class="price">$25.00</div>
+                    <div class="actions">
+                        <button class="btn primary add">Add to Cart</button>
+                        <button class="btn ghost">Details</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card" data-category="maintenance">
+                <div class="visual">🎼</div>
+                <div class="meta">
+                    <div class="name">Portable Music Stand</div>
+                    <div class="desc">Collapsible, lightweight stand for practice and gigs.</div>
+                    <div class="price">$32.00</div>
+                    <div class="actions">
+                        <button class="btn primary add">Add to Cart</button>
+                        <button class="btn ghost">Details</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div style="max-width:var(--max-w);margin:0 auto;padding:0 18px">
+            <div>&copy; 2024 Dolce Vita Violin Store</div>
+            <div style="font-size:0.95rem;opacity:0.9">info@dolcevitaviolin.com | (555) 123-4567</div>
+        </div>
+    </footer>
+
+    <script>
+        // Filter buttons
+        const buttons = document.querySelectorAll('.controls button');
+        const cards = document.querySelectorAll('.grid .card');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+                cards.forEach(c => {
+                    c.style.display = (filter === 'all' || c.dataset.category === filter) ? '' : 'none';
+                });
+            });
+        });
+
+        // Simple add-to-cart feedback
+        document.querySelectorAll('.add').forEach(b => {
+            b.addEventListener('click', (e) => {
+                const name = e.currentTarget.closest('.card').querySelector('.name').textContent;
+                alert(name + ' added to cart');
+            });
+        });
+    </script>
+</body>
+</html>
+<!-- ...existing code... -->
