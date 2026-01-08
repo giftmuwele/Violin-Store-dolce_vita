@@ -10,11 +10,11 @@
   <div class="app-container">
     <header class="topbar">
       <div class="logo">
-        <img src="../Images/Logo.png" alt="Dolce Vita" />
+        <img src="Images/Logo.png" alt="Dolce Vita" />
       </div>
 
       <div class="search">
-        <input type="text" placeholder="Search products..." />
+        <input type="text" id="searchInput" placeholder="Search products..." />
       </div>
 
       <div class="actions">
@@ -41,22 +41,26 @@
 
     <main class="container">
       <aside class="sidebar">
-        <button class="category active">
+        <button class="category active" data-category="instruments">
           <span class="category-icon">🎻</span> Instruments
         </button>
-        <button class="category">
+        <button class="category" data-category="cases">
           <span class="category-icon">💼</span> Cases
         </button>
-        <button class="category">
+        <button class="category" data-category="books">
           <span class="category-icon">📚</span> Books
         </button>
-        <button class="category">
+        <button class="category" data-category="accessories">
           <span class="category-icon">🎵</span> Accessories
         </button>
       </aside>
 
       <section class="hero">
-        <img src="../Images/image-icon.jpg" alt="Violin" class="hero-image" />
+        <img src="Images/image-icon.jpg" alt="Violin" class="hero-image" />
+        <div class="hero-content">
+          <h1 class="hero-title">Enjoy Your Musical</h1>
+          <h2 class="hero-subtitle">Journey with Dolce Vita</h2>
+        </div>
         <div class="cta">
           <button class="order-btn">
             <span>🎵</span> ORDER NOW
@@ -64,29 +68,32 @@
         </div>
       </section>
     </main>
-
+</div>
     <footer class="bottom-nav">
       <div class="nav-item">
         <span class="nav-icon">🏠</span>
-        <span>Home</span>
+        <span > <a href="index.html">Home</a></span>
       </div>
       <div class="nav-item">
-        <span class="nav-icon">☎️</span>
-        <span>Contact Us</span>
+        <span class="nav-icon"><a href="About.html">ℹ️</a></span>
+        <span>AboutUs</span>
       </div>
       <div class="nav-item" style="position: relative;">
         <span class="nav-icon">📦</span>
         <span>Orders</span>
         <span class="badge">2</span>
       </div>
-      <div class="nav-item">
-        <span class="nav-icon">👤</span> 
-        <span>Account</span>
-      </div>
-    
-  
-  <div class="copyright"> <p>© 2025 Dolce Vita Music Store. All rights reserved.</p></div>
+      <a href="https://wa.me/260972724694" target="_blank" style="text-decoration: none;">
+        <div class="nav-item whatsapp-btn">
+          <span class="whatsapp-icon">💬</span>
+          <span>Chat with Us</span>
+        </div>
+      </a>
     </footer>
+
+    <div class="copyright">
+      <p>© 2025 Dolce Vita Music Store. All rights reserved.</p>
+    </div>
   </div>
 
   <script src="script.js"></script>
