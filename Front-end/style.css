@@ -256,7 +256,7 @@ body {
 }
 
 .order-btn {
-  background: linear-gradient(135deg, #d97038 0%, #c05f2a 100%);
+  background: transparent;
   color: white;
   border: none;
   padding: 18px 50px;
@@ -267,14 +267,19 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  box-shadow: 0 6px 20px rgba(217, 112, 56, 0.4);
+  box-shadow: transparent;
   transition: all 0.3s ease;
 }
 
 .order-btn:hover {
   transform: translateY(-2px);
+<<<<<<< HEAD
+  box-shadow: transparent;
+  background: transparent;
+=======
   box-shadow: 0 8px 25px rgba(217, 112, 56, 0.5);
   background: linear-gradient(135deg, #b86b3f 0%, #ae6a46 100%);
+>>>>>>> 3aa3cf753b08c276aa06b5a3355c931270e6b9c7
 }
 
 /* Bottom Navigation */
@@ -315,8 +320,12 @@ body {
 }
 
 .nav-item:hover {
+<<<<<<< HEAD
+  color: transparent;
+=======
   color: #d97038;
   transform: translateY(-2px);
+>>>>>>> 3aa3cf753b08c276aa06b5a3355c931270e6b9c7
 }
 
 .nav-icon {
