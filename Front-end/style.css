@@ -280,3 +280,92 @@ body.light-mode .product-card {
   cursor: pointer;
   z-index: 1000;
 }
+header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search-cart {
+    margin-top: 10px;
+  }
+
+body.books-page {
+  margin-left: 0;
+}
+body.books-page .sidebar {
+  display: none;
+}
+body.books-page footer {
+  margin-left: 0;
+}
+/* Books Page Background */
+.books-page {
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+  min-height: 100vh;
+}
+/* Books Page Specific Styles */
+/* Books Page Layout */
+.books-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.book-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.book-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #003e31;
+  font-weight: bold;
+  text-decoration: none;
+}
+.book-card a:hover {
+  text-decoration: underline;
+}
+    .product-details h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .product-details p {
+      margin-bottom: 15px;
+      color: #B0B0B0;
+    }
+
+    .product-details .price {
+      font-weight: bold;
+      color: #9C27B0;
+    }
+    .footer {
+      background-color: #1E1E1E;
+      color: #B0B0B0;
+      text-align: center;
+      padding: 15px 20px;
+      border-top: 1px solid #333;
+    }
+    
+
+
