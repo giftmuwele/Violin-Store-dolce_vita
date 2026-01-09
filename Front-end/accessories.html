@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessories - Dolce Vita Music Store</title>
+  <link rel="stylesheet" href="accessories.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="topbar">
+      <div class="logo">
+        <img src="Images/Logo.png" alt="Dolce Vita" />
+      </div>
+
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Search accessories..." />
+      </div>
+
+      <div class="actions">
+        
+        <button class="icon-btn">
+          <span>👤</span> Account <span style="font-size: 12px;">▼</span>
+        </button>
+        <button class="cart-btn">
+          🛒
+          <span class="badge">2</span>
+        </button>
+        <button class="icon-btn" onclick="window.location.href='index.html'">
+          
+        </button>
+        <button class="icon-btn" onclick="window.location.href='about.html'">
+          <span>ℹ️</span> About
+        </button>
+       
+      </div>
+    </header>
+
+    <div class="sort-bar">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Accessories</span>
+      </nav>
+      <select class="sort-dropdown">
+    
+        <option>Sort by: Price - Low to High</option>
+        <option>Sort by: Price - High to Low</option>
+        <option>Sort by: Name A-Z</option>
+        
+      </select>
+    </div>
+
+    <main class="accessories-main">
+      <!-- Hero Banner -->
+      <section class="accessories-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>Music Accessories</h1>
+          <p>Everything you need to enhance your musical experience</p>
+        </div>
+      </section>
+
+      <!-- Category Filter -->
+      <section class="category-filter">
+        <div class="container">
+          <h2>Shop by Category</h2>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All Accessories</button>
+            <button class="filter-btn" data-category="strings">Strings</button>
+            <button class="filter-btn" data-category="picks">Brass</button>
+            <button class="filter-btn" data-category="stands">Stands </button>
+            <button class="filter-btn" data-category="tuners">Wind</button>
+            <button class="filter-btn" data-category="cables">Equipments/button>
+            
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Products Grid -->
+      <section class="products-section">
+        <div class="container">
+          <div class="products-grid" id="productsGrid">
+            
+            <!-- Product Card 1 -->
+            <div class="product-card" data-category="strings">
+              <div class="product-badge">Best Seller</div>
+              <div class="product-image">
+                <img src="Image/Strings-5.jpeg" alt="Guitar Strings" 
+                     onerror="this.src='https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Premium Violin Strings Set</h3>
+                <p class="product-desc">Warm, long-lasting tone</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(127)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 45.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card" data-category="picks">
+              <div class="product-image">
+                <img src="" alt="Brass accessories" 
+                     onerror="this.src='https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Brass Accessories Pack </h3>
+                <p class="product-desc">Assorted thickness, premium quality</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="reviews">(89)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 25.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card" data-category="stands">
+              <div class="product-badge new">New</div>
+              <div class="product-image">
+                <img src="Images/guitar-stand.jpg" alt="Guitar Stand" 
+                     onerror="this.src='https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Assorted Music stands</h3>
+                <p class="product-desc">Foldable, adjustable height</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(203)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 120.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card" data-category="tuners">
+              <div class="product-image">
+                <img src="Images/tuner.jpg" alt="Digital Tuner" 
+                     onerror="this.src='https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Digital Clip-On Tuner</h3>
+                <p class="product-desc">Chromatic, 360° rotatable</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(315)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 65.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card" data-category="cables">
+              <div class="product-image">
+                <img src="Images/audio-cable.jpg" alt="Audio Cable" 
+                     onerror="this.src='https://images.unsplash.com/photo-1604519693952-1e93f4e0f417?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Professional Audio Cable</h3>
+                <p class="product-desc">6m length, gold-plated connectors</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(176)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 85.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card" data-category="maintenance">
+              <div class="product-image">
+                <img src="Images/cleaning-kit.jpg" alt="Cleaning Kit" 
+                     onerror="this.src='https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Instrument Cleaning Kit</h3>
+                <p class="product-desc">Complete care set for all instruments</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="reviews">(92)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 95.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="product-card" data-category="strings">
+              <div class="product-image">
+                <img src="Images/violin-strings.jpg" alt="Violin Strings" 
+                     onerror="this.src='https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Violin String Set</h3>
+                <p class="product-desc">Professional grade, warm tone</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(145)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 150.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="product-card" data-category="stands">
+              <div class="product-image">
+                <img src="Images/music-stand.jpg" alt="Music Stand" 
+                     onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Professional Music Stand</h3>
+                <p class="product-desc">Heavy-duty, height adjustable</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(267)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 180.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div class="product-card" data-category="maintenance">
+              <div class="product-badge">Best Seller</div>
+              <div class="product-image">
+                <img src="Images/polish.jpg" alt="Instrument Polish" 
+                     onerror="this.src='https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Premium Instrument Polish</h3>
+                <p class="product-desc">Safe for all finishes, 250ml</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(421)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 55.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div class="product-card" data-category="picks">
+              <div class="product-image">
+                <img src="Images/thumb-picks.jpg" alt="Thumb Picks" 
+                     onerror="this.src='https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Thumb Picks Set (6pcs)</h3>
+                <p class="product-desc">Comfortable fit, various sizes</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="reviews">(73)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 35.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 11 -->
+            <div class="product-card" data-category="tuners">
+              <div class="product-badge new">New</div>
+              <div class="product-image">
+                <img src="Images/tuner-pedal.jpg" alt="Tuner Pedal" 
+                     onerror="this.src='https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Floor Tuner Pedal</h3>
+                <p class="product-desc">LED display, true bypass</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="reviews">(189)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 280.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 12 -->
+            <div class="product-card" data-category="cables">
+              <div class="product-image">
+                <img src="Images/patch-cables.jpg" alt="Patch Cables" 
+                     onerror="this.src='https://images.unsplash.com/photo-1604519693952-1e93f4e0f417?w=400&q=80'" />
+              </div>
+              <div class="product-info">
+                <h3>Patch Cable Pack (5pcs)</h3>
+                <p class="product-desc">15cm each, angled connectors</p>
+                <div class="product-rating">
+                  <span class="stars">★★★★☆</span>
+                  <span class="reviews">(112)</span>
+                </div>
+                <div class="product-footer">
+                  <span class="price">ZMW 95.00</span>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottom-nav">
+      <a href="https://wa.me/260971234567" target="_blank" style="text-decoration: none;">
+        <div class="nav-item whatsapp-btn">
+          <span class="whatsapp-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg>
+          </span>
+          <span>Chat with Us on WhatsApp</span>
+        </div>
+      </a>
+    </footer>
+
+    <div class="copyright">
+      <p>© 2025 Dolce Vita Music Store. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="accessories.js"></script>
+</body>
+</html>

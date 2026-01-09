@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dolce Vita Music Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="topbar">
+      <div class="logo">
+        <img src="Images/Logo.png" alt="Dolce Vita" />
+      </div>
+
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Search products..." />
+      </div>
+
+      <div class="actions">
+
+  <!-- TOP ROW -->
+  <div class="action-row">
+    <button class="icon-btn">
+      <span>👤</span> Account <span style="font-size: 12px;">▼</span>
+    </button>
+
+    <button class="cart-btn">
+      🛒
+      <span class="badge"></span>
+    </button>
+  </div>
+
+  <!-- BOTTOM ROW -->
+  <div class="action-row">
+    <button class="icon-btn" onclick="window.location.href='index.html'">
+      <span>🏠</span> Home
+    </button>
+
+    <button class="icon-btn" onclick="window.location.href='about.html'">
+      <span>ℹ️</span> About
+    </button>
+
+  
+  </div>
+
+</div>
+
+    </header>
+
+    <div class="sort-bar">
+      <select class="sort-dropdown">
+        <option>Sort by: Popularity</option>
+        <option>Sort by: Price</option>
+        <option>Sort by: Rating</option>
+      </select>
+    </div>
+
+    <main class="container">
+      <aside class="sidebar">
+        <button class="category active" data-category="instruments">
+          <span class="category-icon">🎻</span> Instruments
+        </button>
+        <button class="category" data-category="cases">
+          <a href="accessories.html"><span class="category-icon">💼</span> Cases</a>
+        </button>
+        <button class="category" data-category="books">
+          <span class="category-icon">📚</span> Books
+        </button>
+        <button class="category" data-category="accessories">
+
+          <a href="accessories.html"><span class="category-icon">🎵</span> Accessories</a>
+
+
+        </button>
+      </aside>
+
+      <section class="hero">
+        <img src="Images/image-icon.jpg" alt="Violin" class="hero-image" />
+        <div class="hero-content">
+          <h1 class="hero-title">Enjoy Your Musical</h1>
+          <h2 class="hero-subtitle">Journey with Dolce Vita</h2>
+        </div>
+        <div class="cta">
+          <button class="order-btn">
+            <span>🎵</span> ORDER NOW
+          </button>
+        </div>
+      </section>
+    </main>
+
+      <a href="https://wa.me/260972724694" target="_blank" style="text-decoration: none;">
+        <div class="nav-item whatsapp-btn">
+          <span class="whatsapp-icon">💬</span>
+          <span>Chat with Us on WhatsApp</span>
+        </div>
+      </a>
+    </footer>
+
+    <div class="copyright">
+      <p>© 2025 Dolce Vita Music Store. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
