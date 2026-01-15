@@ -363,35 +363,42 @@ body {
   height: 15px;
   background: linear-gradient(to bottom, transparent 0%, rgba(45, 36, 25, 0.3) 50%, rgba(45, 36, 25, 0.7) 100%);
 }
-
 .whatsapp-btn {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-  color: white;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 15px;
-  font-weight: 600;
+  /* Positioning */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+
+  /* Shape & Size */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  padding: 0; /* Remove padding to keep it circular */
+  
+  /* Centering the icon */
   display: flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  justify-content: center;
+
+  /* Colors & Effects */
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .whatsapp-btn:hover {
   background: linear-gradient(135deg, #2be177 0%, #14a089 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-}
-
-.whatsapp-icon {
-  display: flex;
-  align-items: center;
+  transform: scale(1.1) translateY(-5px); 
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 }
 
 .whatsapp-icon svg {
-  width: 20px;
-  height: 20px;
+  width: 30px; 
+  height: 30px;
+  display: block;
 }
 
 
