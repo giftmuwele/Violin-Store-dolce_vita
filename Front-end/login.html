@@ -1,0 +1,30 @@
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<div id="g_id_onload"
+     data-client_id="YOUR_GOOGLE_CLIENT_ID"
+     data-callback="handleCredentialResponse">
+</div>
+
+<div class="g_id_signin"></div>
+
+<script>
+async function handleCredentialResponse(response) {
+
+  const res = await fetch("http://127.0.0.1:5000/api/google-login", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({ token: response.credential })
+  });
+
+  const data = await res.json();
+
+  localStorage.setItem("token", data.token);
+  localStorage.setItem("role", data.role);
+
+  if(data.role === "admin"){
+    window.location.href = "admin.html";
+  } else {
+    window.location.href = "index.html";
+  }
+}
+</script>
