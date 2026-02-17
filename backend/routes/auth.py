@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from app.services.auth_service import verify_google_token, find_or_create_user, generate_jwt
+from ..services.auth_services import verify_google_token, find_or_create_user, generate_jwt
 
 auth_bp = Blueprint("auth_bp", __name__)
 

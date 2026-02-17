@@ -9,7 +9,7 @@ def verify_google_token(token):
         return id_token.verify_oauth2_token(
             token,
             grequests.Request(),
-            current_app.config["GOOGLE_CLIENT_ID"]
+            current_app.config["865720164989-ap4dpnm1vialmn0psm314aojmu9p2lms.apps.googleusercontent.com"] #client Id
         )
     except:
         return None
@@ -43,4 +43,4 @@ def generate_jwt(user):
         "user_id": user[0],
         "role": user[5],
         "exp": datetime.datetime.utcnow() + datetime.timedelta(hours=2)
-    }, current_app.config["SECRET_KEY"], algorithm="HS256")
+    }, current_app.config["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s"], algorithm="HS256")## secret key
