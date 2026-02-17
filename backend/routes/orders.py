@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from app.extensions import mysql
-from app.utils.decorators import token_required, admin_required
+from ..utils.decorators import token_required, admin_required
 import datetime
 
 order_bp = Blueprint("orders", __name__)
