@@ -2,6 +2,19 @@ from flask import Flask
 from flask_cors import CORS
 from .config import Config
 from .extensions import mysql, bcrypt
+import os
+from dotenv import load_dotenv
+from flask import Flask
+
+load_dotenv()
+
+def create_app():
+    app = Flask(__name__)
+
+    app.config["GOOGLE_CLIENT_ID"] = os.getenv("GOOGLE_CLIENT_ID")
+    app.config["GOOGLE_CLIENT_SECRET"] = os.getenv("GOOGLE_CLIENT_SECRET")
+
+    return app
 
 
 def create_app():

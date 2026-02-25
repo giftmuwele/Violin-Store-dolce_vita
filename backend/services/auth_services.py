@@ -3,6 +3,19 @@ from google.auth.transport import requests as grequests
 from flask import current_app
 from app.extensions import mysql
 import jwt, datetime
+import os
+from dotenv import load_dotenv
+from flask import Flask
+
+load_dotenv()
+
+def create_app():
+    app = Flask(__name__)
+
+    app.config["GOOGLE_CLIENT_ID"] = os.getenv("GOOGLE_CLIENT_ID")
+    app.config["GOOGLE_CLIENT_SECRET"] = os.getenv("GOOGLE_CLIENT_SECRET")
+
+    return app
 
 def verify_google_token(token):
     try:
